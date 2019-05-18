@@ -1,10 +1,10 @@
 SILENCE = @
 
-COMPONENT_NAME = LedDriver
+COMPONENT_NAME = ExampleComponent
 
 CPP_PLATFORM = Gcc
 PROJECT_HOME_DIR = .
-#CPPUTEST_HOME = $(CPPUTEST_HOME)
+#CPPUTEST_HOME = $(CPPUTEST_HOME) #Environmental variable set in terminal
 
 INCLUDE_DIRS = $(PROJECT_HOME_DIR)/lib
 SRC_DIRS = $(PROJECT_HOME_DIR)/src
