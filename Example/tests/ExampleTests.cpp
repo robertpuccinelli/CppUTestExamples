@@ -18,5 +18,5 @@ TEST_GROUP(Example)
 
 TEST(Example,ExampleFail)
 {
-	FAIL("Start here.")
+	FAIL("Start here.");
 }

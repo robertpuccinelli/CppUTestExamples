@@ -12,43 +12,15 @@ extern "C"
 */
 TEST_GROUP(CircularBuffer)
 {
-	int circular_buffer;
 	void setup()
 	{
-		circularBufferCreate(&circular_buffer);
 	}
 	void teardown()
 	{
 	}
 };
 
-TEST(CircularBuffer,CreateEmptyBuffer)
+TEST(CircularBuffer,CreateBufferOfSizeN)
 {
-	circularBufferCreate(&circular_buffer);
-	CHECK_EQUAL(0, circular_buffer);
-}
 
-TEST(CircularBuffer, PassBufferInput)
-{
-	bufferInput(1);
-	CHECK_EQUAL(1, circular_buffer);
-}
-
-TEST(CircularBuffer,ReadBufferOutput)
-{
-	int output;
-	bufferInput(1);
-	output = bufferOutput();
-	CHECK_EQUAL(1, output);
-}
-
-TEST(CircularBuffer, BufferShift)
-{
-	int output;
-	bufferInput(1);
-	output = bufferOutput();
-	CHECK_EQUAL(0,output);
-	bufferInput(2);
-	output = bufferOutput();
-	CHECK_EQUAL(1,output);
 }
