@@ -1,7 +1,7 @@
 #include <CppUTest/TestHarness.h>
 extern "C"
 {
-#include "file.h"
+#include "Example.h"
 }
 /* LIST OF TESTS TO DO
 -

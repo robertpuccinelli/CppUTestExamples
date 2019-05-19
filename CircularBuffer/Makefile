@@ -1,19 +1,16 @@
 SILENCE = @
 
-COMPONENT_NAME = LedDriver
+COMPONENT_NAME = CircularBuffer
 
 CPP_PLATFORM = Gcc
 PROJECT_HOME_DIR = .
-#CPPUTEST_HOME = $(CPPUTEST_HOME)
+#CPPUTEST_HOME = $(CPPUTEST_HOME) #Environmental variable set in terminal
 
-INCLUDE_DIRS = $(PROJECT_HOME_DIR)/lib \
-							 $(PROJECT_HOME_DIR)/mocks
-SRC_DIRS = $(PROJECT_HOME_DIR)/src \
-					 $(PROJECT_HOME_DIR)/mocks
-TEST_SRC_DIRS = $(PROJECT_HOME_DIR)/tests \
-MOCKS_DIRS =
+INCLUDE_DIRS = $(PROJECT_HOME_DIR)/lib
+SRC_DIRS = $(PROJECT_HOME_DIR)/src
+TEST_SRC_DIRS = $(PROJECT_HOME_DIR)/tests
 
-CPPFLAGS += -I$(CPPUTEST_HOME)/include -I$(CPPUTEST_HOME)/mocks
+CPPFLAGS += -I$(CPPUTEST_HOME)/include
 CXXFLAGS += -include $(CPPUTEST_HOME)/include/CppUTest/MemoryLeakDetectorNewMacros.h
 CFLAGS += -include $(CPPUTEST_HOME)/include/CppUTest/MemoryLeakDetectorMallocMacros.h
 CPPUTEST_WARNINGFLAGS = -Wall -Wswitch-default
